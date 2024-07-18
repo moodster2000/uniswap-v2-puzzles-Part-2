@@ -27,7 +27,7 @@ contract ExactSwapTest is Test {
         exactSwapWithRouter.performExactSwapWithRouter(weth, usdc, deadline);
 
         uint256 puzzleBal = IERC20(usdc).balanceOf(address(exactSwapWithRouter));
-
+        console2.log(puzzleBal);
         require(puzzleBal / 1e6 == 1337, "Puzzle Balance Not 1337 USDC.");
     }
 }

@@ -32,7 +32,7 @@ contract ExactSwapTest is Test {
         uint256 d = (foo * 997 * r0) / ((r1 * 1000) + (997 * foo));
 
         uint256 puzzleBal = IUniswapV2Pair(usdc).balanceOf(address(exactSwap));
-
+        console2.log(puzzleBal);
         require(puzzleBal / 1e6 == 1337, "Puzzle Balance Not 1337 USDC.");
         require(d / 1e6 == 1337, "Did Not Swap Exact Amount Of WETH.");
     }
